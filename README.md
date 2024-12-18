@@ -1,1 +1,1 @@
-# KPC-Store - eCommerce Website using HTML, CSS, and Javascript
+# ATIN MAP - CTU Map Directory Landing Page
