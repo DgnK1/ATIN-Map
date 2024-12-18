@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Platform Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      color: #333;
+      background-color: #fff;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Left Side */
+    .left-section {
+      flex: 1;
+      max-width: 45%;
+    }
+
+    .left-section h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .left-section p {
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+
+    .cta-button {
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+
+    .accordion {
+      list-style: none;
+    }
+
+    .accordion li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+    }
+
+    .accordion li:hover {
+      color: #000;
+    }
+
+    /* Right Side */
+    .right-section {
+      flex: 1;
+      position: relative;
+      max-width: 50%;
+      height: 400px;
+    }
+
+    .image-stack img {
+      position: absolute;
+      width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-1 { top: 0; left: 0; z-index: 1; }
+    .image-2 { top: 20px; left: 20px; z-index: 2; }
+    .image-3 { top: 40px; left: 40px; z-index: 3; }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .left-section, .right-section {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Section -->
+    <div class="left-section">
+      <h1>"...it's going to do things you didn't think were possible."</h1>
+      <p>Flexible to the extreme</p>
+      <p>Customize the platform to meet your most complex needs with drag-and-drop, from structuring a project to building robust workflows.</p>
+      <a href="#" class="cta-button">Get Started</a>
+
+      <ul class="accordion">
+        <li>Adopted by anyone</li>
+        <li>Open & extendable</li>
+        <li>AI-driven workflows</li>
+        <li>Dashboard anything</li>
+        <li>Data powerhouse</li>
+      </ul>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+      <div class="image-stack">
+        <img src="https://via.placeholder.com/400x250" alt="Image 1" class="image-1">
+        <img src="https://via.placeholder.com/400x250" alt="Image 2" class="image-2">
+        <img src="https://via.placeholder.com/400x250" alt="Image 3" class="image-3">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
